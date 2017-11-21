@@ -19,7 +19,7 @@ class Query(graphene.ObjectType):
 
 schema = graphene.Schema(query=Query)
 
-r = schema.execute('{ polls { title, questions } }')
+result = schema.execute('{ polls { title, questions } }')
 
-pprint.pprint(r.errors, indent=4)
-pprint.pprint(r.data, indent=4)
+pprint.pprint(result.errors, indent=4)
+pprint.pprint(result.data, indent=4)
